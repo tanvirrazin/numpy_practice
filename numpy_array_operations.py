@@ -122,3 +122,44 @@ for i in range(X.shape[0]):
             for m in range(Y.shape[2]):
                 R2[i, j, k, m] = sum(X[i, j, :] * Y[k, :, m])
 print(np.array_equal(R, R2))
+
+print('')
+print('------------- Part 6 ---------------')
+A = np.array([[1, 2, 3],
+              [2, 2, 2],
+              [3, 3, 3]])
+
+B = np.array([[3, 2, 1],
+              [1, 2, 3],
+              [-1, -2, -3]])
+R = A * B
+print(R)
+
+MA = np.mat(A)
+MB = np.mat(B)
+R = MA * MB
+print(R)
+
+print('')
+print('------------ Part 7 ---------------')
+A = np.array([[11, 12, 13], [21, 22, 23], [31, 32, 33]])
+B = np.array([[11, 102, 13], [201, 22, 203], [31, 32, 303]])
+print(np.array_equal(A, B))
+print(np.array_equal(A, A))
+
+print('')
+print('------------- Part 8 --------------')
+a = np.array([[True, True], [False, False]])
+b = np.array([[True, False], [True, False]])
+print(np.logical_or(a, b))
+print(np.logical_and(a, b))
+
+print('')
+print('------------- Part 9 --------------')
+A = np.array([[11, 12, 13], [21, 22, 23], [31, 32, 33]])
+B = np.array([1, 2, 3])
+print(A * B)
+print(A + B)
+
+B = np.array([[1, 2, 3], ] * 3)
+print(B)
