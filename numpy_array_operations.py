@@ -163,3 +163,33 @@ print(A + B)
 
 B = np.array([[1, 2, 3], ] * 3)
 print(B)
+
+print('')
+print('------------- Part 10 -------------')
+B = np.array([1, 2, 3])
+print(B[:, np.newaxis])
+print(A * B[:, np.newaxis])
+print(np.array([[1, 2, 3],] * 3).transpose())
+
+print('')
+print('------------- Part 11 -------------')
+A = np.array([10, 20, 30])
+B = np.array([1, 2, 3])
+print(A[:, np.newaxis])
+print(A[:, np.newaxis] * B)
+
+print('')
+print('------------- Part 12 -------------')
+A = np.array([ [11, 12, 13], [21, 22, 23], [31, 32, 33] ])
+B = np.array([1, 2, 3])
+B = B[np.newaxis, :]
+B = np.concatenate((B, B, B))
+print(B)
+print(A * B)
+print(A + B)
+
+A = np.array([ [11, 12, 13], [21, 22, 23], [31, 32, 33] ])
+B = np.tile(np.array([1, 2, 3]), (3, 1))
+print(B)
+print(A * B)
+print(A + B)
