@@ -193,3 +193,42 @@ B = np.tile(np.array([1, 2, 3]), (3, 1))
 print(B)
 print(A * B)
 print(A + B)
+
+print('')
+print('-------------- Part 13 ------------')
+dist2barcelona = [0,  1498, 1063, 1968,
+                  1498, 1758, 1469, 1472, 2230,
+                  2391, 1138, 505, 725, 3007, 1055,
+                  833, 1354, 857, 2813,
+                  2277, 1347, 1862]
+dists = np.array(dist2barcelona[:12])
+print(dists)
+print(np.abs(dists - dists[:, np.newaxis]))
+
+print('')
+print('-------------- Part 14 -----------')
+A = np.array([[[3, 4, 7],
+               [5, 0, -1] ,
+               [2, 1, 5]],
+
+              [[1, 0, -1],
+               [8, 2, 4],
+               [5, 2, 1]],
+
+              [[2, 1, 3],
+               [1, 9, 4],
+               [5, -2, 4]]])
+B = np.array([[[3, 4, 7],
+               [1, 0, -1],
+               [1, 2, 3]]])
+print(B * A)
+
+B = np.array([1, 2, 3])
+B = B[np.newaxis, :]
+print(B.shape)
+B = np.concatenate((B, B, B)).transpose()
+print(B.shape)
+B = B[:, np.newaxis]
+print(B.shape)
+print(B)
+print(A * B)
